@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Meta tags for character encoding and responsive design -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Triple Tee Package - Jssar's Resort</title>
+    <!-- Link to external CSS file for styling -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header section with logo and navigation -->
+    <header>
+        <div class="logo">
+            <img src="HotelLogo.webp" alt="Hotel Logo">
+        </div>
+        <nav>
+            <ul>
+                <!-- Link back to the homepage -->
+                <li><a href="index.html">Home</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero section with a slideshow and package details -->
+    <section class="hero">
+        <!-- Slideshow container for displaying images -->
+        <div class="slideshow-container">
+            <!-- Slide 1 -->
+            <div class="mySlides fade">
+                <img src="icons/OIP.png" style="width:100%" alt="Golf Course Image 1">
+            </div>
+            <!-- Slide 2 -->
+            <div class="mySlides fade">
+                <img src="icons/591693525.jpg" style="width:100%" alt="Golf Course Image 2">
+            </div>
+            <!-- Slide 3 -->
+            <div class="mySlides fade">
+                <img src="icons/20190611043338_course01.png" style="width:100%" alt="Golf Course Image 3">
+            </div>
+        </div>
+        <!-- Overlay for the hero section with a heading, description, and button -->
+        <div class="hero-overlay">
+            <h1>Triple Tee Golf Package</h1>
+            <p>Perfect for a short getaway! Play three rounds of 18-hole golf, stay two nights in a deluxe room, and enjoy exclusive perks.</p>
+            <!-- Button to scroll to the booking form -->
+            <button class="book-now-btn" onclick="scrollToBooking()">Book Now</button>
+        </div>
+    </section>
+
+    <!-- Package details section -->
+    <section class="package-details">
+        <h2>Package Includes:</h2>
+        <!-- List of package inclusions with icons -->
+        <ul>
+            <li><img src="icons/bomba-clat.png" alt="Golf Icon"> Three 18-hole rounds on championship courses</li>
+            <li><img src="icons/download.png" alt="Room Icon"> Deluxe room accommodation for 2 nights</li>
+            <li><img src="icons/download (1).png" alt="Breakfast Icon"> Complimentary breakfast each morning</li>
+            <li><img src="icons/download (2).png" alt="Cart Icon"> Free golf cart rental</li>
+            <li><img src="icons/download (3).png" alt="Discount Icon"> 20% discount at the Pro Shop</li>
+        </ul>
+        <!-- Package price -->
+        <h2>Price: $999 per person</h2>
+    </section>
+
+    <!-- Booking form section -->
+    <section class="booking-form" id="booking-form-section">
+        <h2>Book Your Triple Tee Package</h2>
+        <!-- Booking form with fields for name, email, and dates -->
+        <form id="booking-form">
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="checkin-date">Check-in Date:</label>
+            <input type="date" id="checkin-date" name="checkin" required>
+
+            <label for="checkout-date">Check-out Date:</label>
+            <input type="date" id="checkout-date" name="checkout" required>
+
+            <!-- Submit button for the form -->
+            <button type="submit">Confirm Booking</button>
+        </form>
+    </section>
+
+    <!-- Footer section with copyright and contact information -->
+    <footer>
+        <p>© 2025 Jssar's Resort. Contact us at jssarResort@gmail.com</p>
+    </footer>
+
+    <!-- Link to external JavaScript file for interactivity -->
+    <script src="script.js"></script>
+    <!-- Inline JavaScript for slideshow and scrolling functionality -->
+    <script>
+        // Function to scroll to the booking form section smoothly
+        function scrollToBooking() {
+            document.getElementById('booking-form-section').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        // Slideshow functionality
+        let slideIndex = 0;
+        showSlides();
+
+        function showSlides() {
+            let i;
+            let slides = document.getElementsByClassName("mySlides");
+            // Hide all slides
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";  
+            }
+            // Increment slide index and reset if necessary
+            slideIndex++;
+            if (slideIndex > slides.length) {slideIndex = 1}    
+            // Display the current slide
+            slides[slideIndex-1].style.display = "block";  
+            // Change slide every 3 seconds
+            setTimeout(showSlides, 3000);
+        }
+    </script>
+</body>
+</html>

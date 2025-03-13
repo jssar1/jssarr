@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Meta tags for character encoding and responsive design -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Five Rounds Package - Jssar's Resort</title>
+    <!-- Link to external CSS file for styling -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header section with logo and navigation -->
+    <header>
+        <div class="logo">
+            <img src="HotelLogo.webp" alt="Hotel Logo">
+        </div>
+        <nav>
+            <ul>
+                <!-- Link back to the homepage -->
+                <li><a href="index.html">Home</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero section with a background video, heading, description, and button -->
+    <section class="hero">
+        <!-- Background video for the hero section -->
+        <video autoplay muted loop class="background-video">
+            <source src="Best 100 Golf Shots Of The Year Part 1 - DP World Tour (1080p, h264) (online-video-cutter.com).mp4" type="video/mp4">
+            <!-- Fallback message for unsupported browsers -->
+            Your browser does not support the video tag.
+        </video>
+        <!-- Overlay for the hero section with a heading, description, and button -->
+        <div class="hero-overlay">
+            <h1>Five Rounds Golf Package</h1>
+            <p>Enjoy five exclusive rounds of golf on our championship courses, luxury accommodation, and more!</p>
+            <!-- Button to scroll to the booking form -->
+            <button class="book-now-btn" onclick="scrollToBooking()">Book Now</button>
+        </div>
+    </section>
+
+    <!-- Package details section -->
+    <section class="package-details">
+        <h2>Package Includes:</h2>
+        <!-- List of package inclusions -->
+        <ul>
+            <li>Five 18-hole rounds on premium golf courses</li>
+            <li>Luxury suite accommodation for 5 nights</li>
+            <li>Complimentary digital training session</li>
+            <li>Exclusive discounts on Pro Shop purchases</li>
+            <li>Free golf cart rental</li>
+        </ul>
+        <!-- Package price -->
+        <h2>Price: $1,999 per person</h2>
+    </section>
+
+    <!-- Booking form section -->
+    <section class="booking-form" id="booking-form-section">
+        <h2>Book Your Five Rounds Package</h2>
+        <!-- Booking form with fields for name, email, dates, and training session selection -->
+        <form id="booking-form">
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="checkin-date">Check-in Date:</label>
+            <input type="date" id="checkin-date" name="checkin" required>
+
+            <label for="checkout-date">Check-out Date:</label>
+            <input type="date" id="checkout-date" name="checkout" required>
+
+            <!-- Dropdown for selecting golf training sessions -->
+            <label for="sessions">Golf Training Sessions:</label>
+            <select id="sessions" name="sessions">
+                <option value="none">No Training</option>
+                <option value="beginner">Beginner Training</option>
+                <option value="advanced">Advanced Training</option>
+            </select>
+
+            <!-- Submit button for the form -->
+            <button type="submit">Confirm Booking</button>
+        </form>
+    </section>
+
+    <!-- Footer section with copyright and contact information -->
+    <footer>
+        <p>© 2025 Jssar's Resort. Contact us at jssarResort@gmail.com</p>
+    </footer>
+
+    <!-- Link to external JavaScript file for interactivity -->
+    <script src="script.js"></script>
+    <!-- Inline JavaScript for scrolling functionality -->
+    <script>
+        // Function to scroll to the booking form section smoothly
+        function scrollToBooking() {
+            document.getElementById('booking-form-section').scrollIntoView({ behavior: 'smooth' });
+        }
+    </script>
+</body>
+</html>
